@@ -9,8 +9,15 @@ ul{
     list-style: none;
 }
 
+h1,h2{
+   color: #0055A2;
+}
 
 a{
+    text-decoration: none;
+}
+
+.nav-links a{
     text-decoration: none;
     color: #fff;
     transition: .4s;
@@ -19,7 +26,7 @@ a{
     font-size: 20px; 
 }
 
-a:hover{
+.nav-links a:hover{
     color: #3a3838;
 }
 
@@ -32,6 +39,7 @@ a:hover{
     cursor: pointer;
     display: none;
     font-family: 'Roboto', sem serifa; 
+    
 }
 
 #check {
@@ -41,8 +49,6 @@ a:hover{
 #check:checked~ul {
     left: 0;
 }
-
-
 
 .nav-bar{
     padding: 1.5rem 2.5rem;
@@ -112,6 +118,7 @@ p{
 .consolidao h1{
     margin-bottom: 20px;
     font-weight: 800;
+    
 }
 
 .momentos-marcantes{
@@ -119,18 +126,28 @@ p{
     font-size: 18px;
 }
 
+
 .momentos-marcantes h1{
     margin-bottom: 20px;
     font-weight: 800;
+
 }
 
 .momentos-marcantes h4{
     margin-bottom: 20px;
     font-weight: 600;
-    
 }
 
+.mj{
+ 
+}
 
+.mj video{
+    width: 600px;
+    height: 400px;
+    display: block;
+    margin: 20px auto;
+}
 
 .lebron h1{
     margin-bottom: 20px;
@@ -140,13 +157,11 @@ p{
 .lebron h4{
     margin-bottom: 20px;
     font-weight: 600;
-    
 }
 
 .img-lebron{
     display: flex;
     justify-content: center;
-
 }
 
 .img-lebron img{
@@ -155,3 +170,181 @@ p{
     border: none;
     border-radius: 5px;
 }
+
+
+
+
+
+.draft {
+    margin-bottom: 20px;
+    font-weight: 800;
+    padding: 3rem 3rem 0rem 3rem;
+    font-size: 18px;
+}
+.draft p{
+    margin-right: 60px;
+}
+.draft h1{
+    margin-bottom: 20px;
+}
+
+.draft img{
+    display: block;
+    margin: 20px auto;
+    margin-bottom: 40px;
+    width: 400px;
+    height: 250px;
+    border: none;
+    border-radius: 5px;
+}
+
+.times{
+    margin-bottom: 20px;
+    font-weight: 800;
+    padding: 3rem 3rem 0rem 3rem;
+    font-size: 18px;
+
+}
+
+.times h1{
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.img-times{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+footer{
+    background-color:  #CC2B30;
+    margin-top: 90px; 
+    padding: 40px;
+    
+}
+
+@media(max-width:900px){
+    .navbar-inner ul li a{
+        font-size: 16px;
+    }
+
+    .navbar-inner img{
+        width: 130px;
+    }    
+    
+
+}
+
+
+@media(max-width:760px){
+    .navbar-inner ul li a{
+        font-size: 14px;
+    }
+  
+
+    .navbar-inner img{
+        width: 130px;
+    }
+
+    .img-quadra img{
+        width: 500px;
+        height: 300px;
+     
+    }
+}
+
+@media (max-width:576px) {
+    .navbar-inner ul li a{
+      font-size: 12px;
+    }
+   
+    .navbar-inner img{
+        width: 100px;
+    }
+
+    .img-quadra img{
+        width: 400px;
+        height: 200px;
+     
+    }
+
+    .mj video{
+        width: 400px;
+        height: 300px;
+    }
+
+    .draft img{
+        margin-right: 60px;
+        width: 400px;
+        height: 250px;
+    }
+}
+
+@media(max-width:462px){
+
+    .checkbtn {
+        display: block;
+    }
+
+   .navbar-inner ul {
+        position: fixed;
+        width: 400px;
+        box-shadow: 0 0 5px grey;
+        max-width: 70%;
+        height: 100vh;
+        background-color: #0055A2;
+        top: 0;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 45;
+     
+        flex-direction: column;    
+        justify-content: flex-start; /* Alinhe os itens ao início */
+        align-items: center; /* Centralize os itens horizontalmente */   
+    }
+
+    nav ul li {
+        display: block;
+        line-height: 30px;
+        padding: 12px 0;
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    .navbar-inner ul li a{
+        font-size: 16px;
+    }
+  
+    .navbar-inner img{
+        width: 100px;
+    }
+
+    .img-quadra img{
+        width: 300px;
+        height: 200px;
+     
+    }
+
+    .mj video{
+        width: 300px;
+        height: 200px;
+    }
+
+    .draft img{
+        margin-right: 60px;
+        width: 320px;
+        height: 200px;
+    }
+
+    .img-times{
+        align-items: center;
+        gap: 20px;
+        width: 33px;
+        height: 33px;
+        margin-left: 20px;
+    }
+}    

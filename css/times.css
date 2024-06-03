@@ -1,23 +1,26 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", Sans-serif;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-h1,h2{
-   color: #0055A2;
+h1, h2, h5 {
+    color: #0055A2;
+    margin-bottom: 20px;
 }
 
-a{
+a {
     text-decoration: none;
+    color: rgb(27, 27, 27);
+    font-weight: 600;
 }
 
-.nav-links a{
+.nav-links a {
     text-decoration: none;
     color: #fff;
     transition: .4s;
@@ -26,7 +29,7 @@ a{
     font-size: 20px; 
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
     color: #3a3838;
 }
 
@@ -38,8 +41,7 @@ a{
     margin-right: 10px;
     cursor: pointer;
     display: none;
-    font-family: 'Roboto', sem serifa; 
-    
+    font-family: 'Roboto', sans-serif; 
 }
 
 #check {
@@ -50,14 +52,13 @@ a{
     left: 0;
 }
 
-.nav-bar{
+.nav-bar {
     padding: 1.5rem 2.5rem;
     border-bottom: 2px solid #ddd;
     background-color: #0055A2;
-
 }
 
-.navbar-inner{
+.navbar-inner {
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -65,28 +66,189 @@ a{
     margin: 0 auto;
 }
 
-.navbar-inner img{
-   width: 170px;
+.navbar-inner img {
+    width: 170px;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     gap: 40px;
 }
 
-
-
-.times-nba{
+.times-nba {
     margin-top: 40px;
-    flex-direction: column;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-  
+}
+.times-nba h1{
+    margin-bottom: 40px;
 }
 
 .times {
-    flex-grow: 1;
-    flex-basis: 0;
-    margin: 0 10px; /* Adapte conforme necessário */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.times > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #fffbfb; 
+    box-shadow: 1px 1px 1px 1px rgb(94, 93, 93); 
+    border-radius: 8px; 
+}
+
+.times ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.times li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.times li img {
+    width: 30px;
+    height: 30px;
+}
+
+.times li p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.titulos-nba {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulos-nba h1 {
+    margin-bottom: 20px;
+    color: #0055A2;
+}
+
+.titulos-nba table {
+    width: 80%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 1px 1px rgb(245, 233, 233); /* Sombra ao redor do box */
+    border-radius: 8px; /* Canto arredondado opcional */
+    overflow: hidden; /* Para assegurar que os cantos arredondados funcionem */
+    text-align: center; /* Centralizar texto */
+    
+}
+
+.titulos-nba th, .titulos-nba td {
+    padding: 10px 20px;
+    text-align: center; /* Centralizar texto */
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulos-nba th {
+    background-color: #003366;
+    color: #ffffff;
+}
+
+
+.titulos-nba td img {
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+footer{
+    background-color:  #CC2B30;
+    margin-top: 90px; 
+    padding: 40px;
+    
+}
+
+
+@media (max-width: 900px) {
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .navbar-inner img {
+        width: 130px;
+    }
+}
+
+@media (max-width: 760px) {
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .navbar-inner img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .navbar-inner img {
+        width: 80px;
+    }
+}
+
+@media (max-width: 462px) {
+    .checkbtn {
+        display: block;
+    }
+
+    .navbar-inner ul {
+        position: fixed;
+        width: 300px;
+        box-shadow: 0 0 5px grey;
+        height: 100vh;
+        background-color: #0055A2;
+        top: 0;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+        z-index: 45;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .nav-links li {
+        display: block;
+        line-height: 30px;
+        padding: 12px 0;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .navbar-inner img {
+        width: 70px;
+    }
+
+    .titulos-nba table {
+        width: 100%;
+    }
+
+    .times {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }

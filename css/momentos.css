@@ -2,18 +2,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", Sans-serif;
 }
 
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
 ul {
     list-style: none;
 }
 
-h1, h2, h5 {
-    color: #0055A2;
-    margin-bottom: 20px;
-}
-
+/* Estilo para o cabeçalho e a barra de navegação */
 a {
     text-decoration: none;
     color: rgb(27, 27, 27);
@@ -75,99 +77,45 @@ a {
     gap: 40px;
 }
 
-.times-nba {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.times-nba h1{
-    margin-bottom: 40px;
-}
 
-.times {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 100px;
-}
-
-.times > div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+/* Estilo para a seção principal */
+section.momentos {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
     padding: 20px;
-    background-color: #fffbfb; 
-    box-shadow: 1px 1px 1px 1px rgb(94, 93, 93); 
-    border-radius: 8px; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.times ul {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.times li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.times li img {
-    width: 30px;
-    height: 30px;
-}
-
-.times li p {
-    margin: 0;
-    font-size: 16px;
-}
-
-.titulos-nba {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.titulos-nba h1 {
+section.momentos h1 {
     margin-bottom: 20px;
-    color: #0055A2;
+    text-align: center;
+    color: #444;
 }
 
-.titulos-nba table {
-    width: 80%;
-    border-collapse: collapse;
-    background-color: #ffffff;
-    box-shadow: 1px 1px 1px 1px rgb(245, 233, 233); /* Sombra ao redor do box */
-    border-radius: 8px; /* Canto arredondado opcional */
-    overflow: hidden; /* Para assegurar que os cantos arredondados funcionem */
-    text-align: center; /* Centralizar texto */
-    
+section.momentos p {
+    margin-bottom: 20px;
 }
 
-.titulos-nba th, .titulos-nba td {
-    padding: 10px 20px;
-    text-align: center; /* Centralizar texto */
-    border-bottom: 1px solid #ddd;
-    align-items: center;
-    justify-content: center;
+section.momentos ol {
+    list-style: decimal;
+    margin-left: 20px;
 }
 
-.titulos-nba th {
-    background-color: #003366;
-    color: #ffffff;
+section.momentos li {
+    margin-bottom: 20px;
 }
 
+section.momentos h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+}
 
-.titulos-nba td img {
-    width: 20px;
-    height: 20px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+section.momentos p strong {
+    font-weight: bold;
+    color: #000;
 }
 
 footer{
@@ -176,8 +124,7 @@ footer{
     padding: 40px;
     
 }
-
-
+/* Estilo para o responsivo */
 
 @media (max-width: 900px) {
     .nav-links a {
@@ -242,14 +189,5 @@ footer{
 
     .navbar-inner img {
         width: 70px;
-    }
-
-    .titulos-nba table {
-        width: 100%;
-    }
-
-    .times {
-        grid-template-columns: 1fr;
-        gap: 20px;
     }
 }
